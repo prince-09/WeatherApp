@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:paddingHorizontal="10dp"
+    android:background="@color/colorPrimary"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/cityname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginTop="20dp"
+        android:hint="Enter city name"
+        android:paddingHorizontal="15dp"
+        android:paddingVertical="10dp"
+        android:textColor="#ffffff"
+        android:textColorHint="#ffffff"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"></EditText>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg"
+        android:alpha="0.8"
+        android:id="@+id/go"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cityname"
+        android:text="GO"
+        android:textAllCaps="false"
+        android:textSize="18sp"
+        android:layout_marginTop="20dp"
+        android:paddingVertical="10dp"
+        >
+    </Button>
+
+    <LinearLayout
+        android:id="@+id/temp"
+        android:layout_width="150dp"
+        android:layout_height="140dp"
+        android:background="@drawable/bg"
+        android:orientation="vertical"
+        android:padding="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/mintemp"
+        app:layout_constraintEnd_toStartOf="@+id/weather"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/go">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:alpha="0.8"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal"
+            android:text="Current temperature"
+            android:textColor="@color/colorPrimary"
+            android:textSize="15sp"></TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:id="@+id/temperature"
+            android:fontFamily="sans-serif-condensed"
+            android:text=" C"
+            android:textColor="@color/colorPrimary"
+            android:textSize="25sp"></TextView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/maxtemp"
+        android:layout_width="150dp"
+        android:layout_height="140dp"
+        android:background="@drawable/bg"
+        android:orientation="vertical"
+
+        android:padding="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/mintemp"
+        app:layout_constraintTop_toBottomOf="@+id/weather">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:alpha="0.8"
+            android:gravity="center_horizontal"
+            android:layout_gravity="center_horizontal"
+            android:text="Minimum temperature"
+            android:textColor="@color/colorPrimary"
+            android:textSize="15sp"></TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:id="@+id/mintemperature"
+            android:fontFamily="sans-serif-condensed"
+            android:text=" C"
+            android:textColor="@color/colorPrimary"
+            android:textSize="25sp"></TextView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/weather"
+        android:layout_width="150dp"
+        app:layout_constraintStart_toEndOf="@+id/temp"
+        android:layout_height="140dp"
+        app:layout_constraintBottom_toTopOf="@id/maxtemp"
+        android:background="@drawable/bg"
+        android:orientation="vertical"
+        android:padding="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/go">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:alpha="0.8"
+            android:layout_gravity="center_horizontal"
+            android:text="Weather"
+            android:textColor="@color/colorPrimary"
+            android:textSize="15sp"></TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="35dp"
+            android:fontFamily="sans-serif-condensed"
+            android:text=""
+            android:id="@+id/weathercast"
+            android:textColor="@color/colorPrimary"
+            android:textSize="25sp"></TextView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/mintemp"
+        android:layout_width="150dp"
+        android:layout_height="140dp"
+        android:background="@drawable/bg"
+        app:layout_constraintEnd_toStartOf="@id/maxtemp"
+        android:orientation="vertical"
+        android:padding="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/temp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:alpha="0.8"
+            android:gravity="center_horizontal"
+            android:layout_gravity="center_horizontal"
+            android:text="Maximum temperature"
+            android:textColor="@color/colorPrimary"
+            android:textSize="15sp"></TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:id="@+id/maxtemparauter"
+            android:fontFamily="sans-serif-condensed"
+            android:text=" C"
+            android:textColor="@color/colorPrimary"
+            android:textSize="25sp"></TextView>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
