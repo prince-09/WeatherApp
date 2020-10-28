@@ -1,0 +1,2 @@
+# WeatherApp
+An android application which gives you the informtion of weather of all the cities around the world.
